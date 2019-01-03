@@ -1,0 +1,10 @@
+name: Tags
+version: 1.0
+author: Cougers
+depend: [Essentials]
+main: me.cougers.tags.Tags
+commands:
+    tags:
+        aliases: [tag]
+    admintags:
+        aliases: [atags]
