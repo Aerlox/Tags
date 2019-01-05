@@ -9,6 +9,7 @@ import org.bukkit.entity.Player;
 
 import me.cougers.tags.Tags;
 import me.cougers.tags.utility.Utils;
+import me.cougers.tags.version.VersionSound;
 
 public class Tag {
 
@@ -82,7 +83,7 @@ public class Tag {
 			targetPlayer.sendMessage("");
 			targetPlayer.sendMessage(Utils.c("&cYou no longer own the tag:&6&l " + tag.getName()));
 			targetPlayer.sendMessage("");
-			Utils.getTagSound(targetPlayer);
+			Utils.sound(targetPlayer, VersionSound.ENTITY_ZOMBIE_ATTACK_DOOR_WOOD);
 		}
 		return "&f > &aGiven " + targetName + " the tag '" + tag.getName() + "'";
 	}
@@ -97,7 +98,7 @@ public class Tag {
 			targetPlayer.sendMessage("");
 			targetPlayer.sendMessage(Utils.c("  &a&nCongratulations!&6 You now own the tag:&6&l " + tag.getName() + "&6." + "\n" + " " + "\n" + "   &f > &6Select your tag by doing &a/tags"));
 			targetPlayer.sendMessage("");
-			Utils.getTagSound(targetPlayer);
+			Utils.sound(targetPlayer, VersionSound.ENTITY_PLAYER_LEVELUP);
 		}
 		return "&f > &aGiven " + targetName + " the tag '" + tag.getName() + "'";
 	}

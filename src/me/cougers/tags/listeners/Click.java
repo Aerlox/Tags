@@ -1,4 +1,4 @@
-package me.cougers.tags.events;
+package me.cougers.tags.listeners;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;

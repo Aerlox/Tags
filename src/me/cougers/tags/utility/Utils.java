@@ -5,13 +5,14 @@ import java.util.ArrayList;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
-import org.bukkit.Sound;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+
+import me.cougers.tags.version.VersionSound;
 
 public class Utils {
 
@@ -29,6 +30,9 @@ public class Utils {
 			console.sendMessage(c(msg));
 		}
 	}
+	public static void sound(Player p, VersionSound sound) {
+		p.playSound(p.getLocation(), sound.get(), 1.0f, 1.0f);
+	}
 	public static ItemStack mod(ItemStack stack, String name, String[] lore, boolean itemflags) {
 		ItemStack item = stack;
 		ItemMeta meta = item.getItemMeta();
@@ -43,15 +47,6 @@ public class Utils {
 		meta.setLore(list);
 		item.setItemMeta(meta);
 		return item;
-	}
-	public static void getTagSound(Player p) {
-		Sound s = null;
-		try {
-			s = Sound.valueOf("LEVEL_UP");
-		} catch (IllegalArgumentException iae) {
-			s = Sound.valueOf("ENTITY_PLAYER_LEVELUP");
-		}
-		p.playSound(p.getLocation(), s, 1.0f, 1.0f);
 	}
 	@SuppressWarnings("deprecation")
 	public static String[] grabUser(String argument) {

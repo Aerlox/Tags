@@ -1,7 +1,7 @@
 name: Tags
 version: 1.0
 author: Cougers
-depend: [Essentials]
+depend: [EssentialsChat]
 main: me.cougers.tags.Tags
 commands:
     tags:

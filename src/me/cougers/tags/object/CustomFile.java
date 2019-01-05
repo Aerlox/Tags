@@ -13,15 +13,15 @@ public class CustomFile {
 	private String path;
 	private File f;
 	private FileConfiguration yaml;
-	
+
 	public CustomFile(String path) {
 		this.path = path;
 		this.f = new File(path);
-		
-		if (!f.getParentFile().exists()) {
-			f.mkdirs();
+
+		if (!this.f.getParentFile().exists()) {
+			this.f.mkdir();
 		}
-		
+
 		if (!f.exists()) {
 			try {
 				f.createNewFile();
